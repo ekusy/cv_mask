@@ -1,29 +1,35 @@
 #include "cvFunc.h"
-
+#define COLOR_MACRO
 
 cvFunc::cvFunc()
 {
-	source = cvLoadImage("./source/test.png");
-	min.setColor(HSV, 0, 130, 100);
-	max.setColor(HSV, 10, 255, 140);
+	source = cvLoadImage("./source/sample2.png");
+	min.setColor(HSV_MODE, 100, 130, 100);
+	max.setColor(HSV_MODE, 110, 255, 140);
 }
 
 cvFunc::~cvFunc()
 {
 }
 
-Position cvFunc::getPosition(Mat _source){
+Position cvFunc::getPosition(){
+	return getPosition(source);
+}
+Position cvFunc::getPosition(double _sX, double _sY){
+	return getPosition(source, _sX, _sY);
+}
+Position cvFunc::getPosition(Mat _sourced){
 	Position pos;
 	int count = 0;
-	Mat image;
+	Mat image = _source.clone();
 	Mat mask(image.rows, image.cols, CV_8UC3);
-	image = _source;
+	mask = Scalar(0, 0, 0);
 
 	cvtColor(image, image, CV_BGR2HSV);
 	for (int row = 0; row < image.rows; row++){
 		for (int col = 0; col < image.cols; col++){
 			int num = image.step*row + col*image.channels();
-			color source(HSV,image.data[num], image.data[num + 1], image.data[num + 2]);
+			color source(HSV_MODE,image.data[num], image.data[num + 1], image.data[num + 2]);
 			if (judgeColor(source, max, min)){
 				mask.data[num] = 255;
 				mask.data[num+1] = 0;
@@ -34,8 +40,15 @@ Position cvFunc::getPosition(Mat _source){
 			}
 		}
 	}
-	pos.x /= count;
-	pos.y /= count;
+	if (count != 0){
+		pos.x /= count;
+		pos.y /= count;
+	}
+	else{
+		pos.x = -1;
+		pos.y = -1;
+
+	}
 
 	return pos;
 }
@@ -48,7 +61,7 @@ Position cvFunc::getPosition(Mat _source, double _sX, double _sY){
 	pos.y /= _sY;
 	return pos;
 }
-bool cvFunc::judge(int source, int min, int max) {
+bool cvFunc::judge(unsigned char source, unsigned char min, unsigned char max) {
 	if (min == max)
 		return true;
 	if (min > max) {
@@ -61,13 +74,13 @@ bool cvFunc::judge(int source, int min, int max) {
 	}
 	return false;
 }
-bool cvFunc::judgeColor(color _source, int h_min, int h_max, int s_min, int s_max, int v_min, int v_max) {
+bool cvFunc::judgeColor(color _source, unsigned char h_min, unsigned char h_max, unsigned char s_min, unsigned char s_max, unsigned char v_min, unsigned char v_max) {
 	int count = 0;
-	if (judge(_source.H, h_min, h_max))
+	if (judge(_source.getColorH(), h_min, h_max))
 		count++;
-	if (judge(_source.S, s_min, s_max))
+	if (judge(_source.getColorS(), s_min, s_max))
 		count++;
-	if (judge(_source.V, v_min, v_max))
+	if (judge(_source.getColorV(), v_min, v_max))
 		count++;
 
 	if (count == 3)
@@ -76,5 +89,7 @@ bool cvFunc::judgeColor(color _source, int h_min, int h_max, int s_min, int s_ma
 		return false;
 }
 bool cvFunc::judgeColor(color _source, color _thresholdMax, color _thresholdMin){
-	return judgeColor(_source, _thresholdMin.H, _thresholdMax.H, _thresholdMin.S, _thresholdMax.S, _thresholdMin.V, _thresholdMax.V);
+	return judgeColor(_source, _thresholdMin.getColorH(), _thresholdMax.getColorH()
+		, _thresholdMin.getColorS(), _thresholdMax.getColorS()
+		, _thresholdMin.getColorV(), _thresholdMax.getColorV());
 }

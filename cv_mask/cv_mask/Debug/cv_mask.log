@@ -1,29 +1,16 @@
-﻿2016/01/14 14:06:36 にビルドを開始しました。
-     1>ノード 2 上のプロジェクト "C:\Users\ptx01\Documents\git\cv_mask\cv_mask\cv_mask\cv_mask.vcxproj" (Rebuild ターゲット)。
+﻿2016/01/15 14:01:57 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\Users\ptx01\Documents\git\cv_mask\cv_mask\cv_mask\cv_mask.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D HAS_OPENCV /D CODE_ANALYSIS /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze /errorReport:prompt   /analyze:quiet color.cpp cvFunc.cpp main.cpp Position.cpp
-         Position.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D HAS_OPENCV /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         cvFunc.cpp
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\cv_mask\cvfunc.cpp(47): warning C4244: '/=' : 'double' から 'int' への変換です。データが失われる可能性があります。
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\cv_mask\cvfunc.cpp(48): warning C4244: '/=' : 'double' から 'int' への変換です。データが失われる可能性があります。
-         color.cpp
-         C/C++ のコード分析を実行しています...
-         コードを生成中...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ptx01\Documents\git\cv_mask\cv_mask\Debug\cv_mask.exe" /INCREMENTAL /NOLOGO C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_videostab2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_video2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ts2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_superres2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_stitching2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_photo2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ocl2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_objdetect2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_nonfree2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_ml2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_legacy2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_imgproc2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_highgui2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_gpu2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_flann2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_features2d2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_core2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_contrib2410d.lib C:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/lib/Win32/v120/Debug/opencv_calib3d2410d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ptx01\Documents\git\cv_mask\cv_mask\Debug\cv_mask.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ptx01\Documents\git\cv_mask\cv_mask\Debug\cv_mask.lib" /MACHINE:X86 Debug\color.obj
          Debug\cvFunc.obj
          Debug\main.obj
          Debug\Position.obj
          cv_mask.vcxproj -> C:\Users\ptx01\Documents\git\cv_mask\cv_mask\Debug\cv_mask.exe
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\mat.hpp(1730): warning C6011: NULL ポインター 'm' を逆参照しています。これが行われる可能性のある以前の行 1727 を参照してください
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\mat.hpp(1743): warning C6011: NULL ポインター 'm' を逆参照しています。これが行われる可能性のある以前の行 1740 を参照してください
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\operations.hpp(1280): warning C6385: 'this->val' から無効なデータを読み取っています: 読み取り可能なサイズは '12' バイトですが、'i' バイトを読み取る可能性があります。
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\operations.hpp(228): warning C6201: インデックス '3' は、有効なインデックスの範囲 '0' から '2' (スタックが割り当てられた可能性のあるバッファー 'val') を超えています。
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\operations.hpp(235): warning C6201: インデックス '4' は、有効なインデックスの範囲 '0' から '3' (スタックが割り当てられた可能性のあるバッファー 'val') を超えています。
-     1>c:\users\ptx01\documents\git\cv_mask\cv_mask\packages\opencv.2.4.10\build\native\include\opencv2\core\operations.hpp(221): warning C6201: インデックス '2' は、有効なインデックスの範囲 '0' から '1' (スタックが割り当てられた可能性のあるバッファー 'val') を超えています。
-     1>プロジェクト "C:\Users\ptx01\Documents\git\cv_mask\cv_mask\cv_mask\cv_mask.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
+     1>プロジェクト "C:\Users\ptx01\Documents\git\cv_mask\cv_mask\cv_mask\cv_mask.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:08.01
+経過時間 00:00:01.78

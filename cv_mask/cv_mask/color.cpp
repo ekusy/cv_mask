@@ -1,5 +1,5 @@
 #include "color.h"
-
+#define COLOR_MACRO
 
 color::color()
 {
@@ -24,13 +24,13 @@ color::~color()
 }
 
 void color::init(){
-	colorMode = RGB;
+	colorMode = RGB_MODE;
 	color1 = 0;
 	color2 = 0;
 	color3 = 0;
 }
 bool color::setColorMode(unsigned char _colorMode){
-	if (_colorMode == RGB || _colorMode == HSV){
+	if (_colorMode == RGB_MODE || _colorMode == HSV_MODE){
 		colorMode = _colorMode;
 		return true;
 	}
@@ -69,5 +69,30 @@ bool color::setColor(unsigned char _mode, unsigned char _color1, unsigned char  
 	}
 	else
 		return false;
+}
+color color::getColor(void){
+	color c(colorMode, color1, color2, color3);
+	return c;
+}
+unsigned char color::getColorMode(void){
+	return colorMode;
+}
+unsigned char color::getColorR(void){
+	return color1;
+}
+unsigned char color::getColorG(void){
+	return color2;
+}
+unsigned char color::getColorB(void){
+	return color3;
+}
+unsigned char color::getColorH(void){
+	return getColorR();
+}
+unsigned char color::getColorS(void){
+	return getColorG();
+}
+unsigned char color::getColorV(void){
+	return getColorB();
 }
 

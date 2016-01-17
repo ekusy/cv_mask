@@ -18,10 +18,12 @@ public:
 	cvFunc();
 	~cvFunc();
 
+	Position getPosition(void);
+	Position getPosition(double _sX, double _sY);
 	Position getPosition(Mat _source);
 	Position getPosition(Mat _source,double _sX,double _sY);
-	bool judge(int source, int min, int max);
-	bool judgeColor(color _source, int h_min, int h_max, int s_min, int s_max, int v_min, int v_max);
+	bool judge(unsigned char source, unsigned char min, unsigned char max);
+	bool judgeColor(color _source, unsigned char h_min, unsigned char h_max, unsigned char s_min, unsigned char s_max, unsigned char v_min, unsigned char v_max);
 	bool judgeColor(color _source, color _thresholdMax, color _thresholdMin);
 };
 
