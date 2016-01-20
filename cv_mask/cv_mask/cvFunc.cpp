@@ -3,22 +3,41 @@
 
 cvFunc::cvFunc()
 {
-	source = cvLoadImage("./source/sample2.png");
+	if (setCapture()){
+		source = cvLoadImage("./source/sample2.png");
+	}
 	min.setColor(HSV_MODE, 100, 130, 100);
 	max.setColor(HSV_MODE, 110, 255, 140);
 }
-
+bool cvFunc::setCapture(void){
+	cap.open(1);
+	if (cap.isOpened){
+		return true;
+	}
+	else{
+		cap.open(0);
+		if (cap.isOpened){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+}
+void cvFunc::readCapture(void){
+	if (cap.isOpened)
+		cap >> source;
+}
 cvFunc::~cvFunc()
 {
 }
-
 Position cvFunc::getPosition(){
 	return getPosition(source);
 }
 Position cvFunc::getPosition(double _sX, double _sY){
 	return getPosition(source, _sX, _sY);
 }
-Position cvFunc::getPosition(Mat _sourced){
+Position cvFunc::getPosition(Mat _source){
 	Position pos;
 	int count = 0;
 	Mat image = _source.clone();

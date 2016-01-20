@@ -14,10 +14,13 @@ private :
 	Position pos;
 	color max;
 	color min;
+	VideoCapture cap;
 public:
 	cvFunc();
 	~cvFunc();
 
+	bool setCapture(void);
+	void readCapture(void);
 	Position getPosition(void);
 	Position getPosition(double _sX, double _sY);
 	Position getPosition(Mat _source);

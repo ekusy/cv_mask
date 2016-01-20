@@ -1,4 +1,4 @@
-﻿2016/01/15 14:01:57 にビルドを開始しました。
+﻿2016/01/20 17:37:12 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\ptx01\Documents\git\cv_mask\cv_mask\cv_mask\cv_mask.vcxproj" (Build ターゲット)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\ptx01\Documents\git\cv_mask\cv_mask\packages\OpenCV.2.4.10\build\native\../../build/native/include/ /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D HAS_OPENCV /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -13,4 +13,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:01.78
+経過時間 00:00:01.82

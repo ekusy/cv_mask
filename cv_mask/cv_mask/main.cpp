@@ -14,6 +14,7 @@ void main(void){
 
 	while (true){
 		DWORD start = timeGetTime();
+		CV.readCapture();
 		Position pos = CV.getPosition(0.5,0.5);
 		DWORD end = timeGetTime();
 		double time = (double)(end - start) / 1000;
